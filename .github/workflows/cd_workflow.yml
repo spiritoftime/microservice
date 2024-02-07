@@ -18,7 +18,7 @@ jobs:
         run: |
           touch .env
           echo APP_SECRET=${{ secrets.APP_SECRET }} >> .env
-          echo MONGODB_URI=${{ secrets.MONGODB_URL }} >> .env
+          echo MONGODB_URI=${{ secrets.MONGODB_URI }} >> .env
           echo MESSAGE_BROKER_URL=${{ secrets.MESSAGE_BROKER_URL }} >> .env
           echo PORT=${{ secrets.PRODUCTS_PORT }} >> .env
           cat .env
@@ -27,7 +27,7 @@ jobs:
         run: |
           touch .env
           echo APP_SECRET=${{ secrets.APP_SECRET }} >> .env
-          echo MONGODB_URI=${{ secrets.MONGODB_URL }} >> .env
+          echo MONGODB_URI=${{ secrets.MONGODB_URI }} >> .env
           echo MESSAGE_BROKER_URL=${{ secrets.MESSAGE_BROKER_URL }} >> .env
           echo PORT=${{ secrets.SHOPPING_PORT }} >> .env
           cat .env
@@ -36,7 +36,7 @@ jobs:
         run: |
           touch .env
           echo APP_SECRET=${{ secrets.APP_SECRET }} >> .env
-          echo MONGODB_URI=${{ secrets.MONGODB_URL }} >> .env
+          echo MONGODB_URI=${{ secrets.MONGODB_URI }} >> .env
           echo MESSAGE_BROKER_URL=${{ secrets.MESSAGE_BROKER_URL }} >> .env
           echo PORT=${{ secrets.CUSTOMER_PORT }} >> .env
           cat .env
@@ -49,8 +49,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          application_name: "last-attempt"
-          environment_name: "Last-attempt-env"
+          application_name: "jesus"
+          environment_name: "Jesus-env"
           version_label: "ver-${{ github.sha }}"
           region: ap-southeast-1
           deployment_package: deploy.zip
