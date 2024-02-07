@@ -49,8 +49,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          application_name: "last_microsvc"
-          environment_name: "Lastmicrosvc-env"
+          application_name: "fuck"
+          environment_name: "fuck-env"
           version_label: "ver-${{ github.sha}}"
           region: ap-southeast-1
           deployment_package: deploy.zip
