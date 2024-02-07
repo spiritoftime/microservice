@@ -1,26 +1,30 @@
 {
-  "name": "gateway",
+  "name": "customer",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "NODE_ENV=dev nodemon src/index.js",
+    "start": "NODE_ENV=prod node src/index.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "amqplib": "^0.10.3",
+    "axios": "^1.6.7",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
     "express": "^4.18.2",
-    "express-http-proxy": "^2.0.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^5.12.2",
+    "mongoose": "^5.13.22",
     "uuid": "^9.0.1",
     "winston": "^3.11.0"
   },
   "devDependencies": {
+    "jest": "^29.7.0",
     "nodemon": "^3.0.3"
   }
 }
