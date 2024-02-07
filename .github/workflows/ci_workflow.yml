@@ -22,11 +22,20 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
-          cache-dependency-path: customer/package-lock.json
 
       - name: Test Customer Service
         working-directory: ./customer
+        run: |
+          npm ci
+          npm test
+
+      - name: Test Product Service
+        working-directory: ./products
+        run: |
+          npm ci
+          npm test
+      - name: Test Shopping Service
+        working-directory: ./shopping
         run: |
           npm ci
           npm test
