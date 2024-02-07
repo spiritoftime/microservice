@@ -23,10 +23,21 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-          cache-dependency-path: customer/package-lock.json
+          # cache-dependency-path: customer/package-lock.json
 
       - name: Test Customer Service
         working-directory: ./customer
+        run: |
+          npm ci
+          npm test
+
+      - name: Test Product Service
+        working-directory: ./product
+        run: |
+          npm ci
+          npm test
+      - name: Test Shopping Service
+        working-directory: ./shopping
         run: |
           npm ci
           npm test
